@@ -108,26 +108,7 @@ interview-app/
 
 ---
 
-## カスタマイズ方法
 
-### 質問の追加
-
-1. `app.py` 内の `questions_by_category` に質問を追加します。
-
-```
-"new_category": [
-    "追加する質問1",
-    "追加する質問2"
-]
-```
-
-1. HTMLで選択肢を更新します。
-
-```
-<option value="new_category">新しいカテゴリ</option>
-```
-
----
 
 ## 今後の改善案
 
