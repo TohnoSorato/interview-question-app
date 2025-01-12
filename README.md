@@ -141,10 +141,4 @@ interview-app/
 
 ---
 
-## 開発者
-
-蒼斗 東恩納
-
-- **目標**: Webやソフトウェア開発のバックエンドプログラマー
-- **学習中スキル**: Python, Java, SQL, Flask, HTML/CSS/JavaScript など
 
