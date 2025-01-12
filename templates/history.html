@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>履歴</title>
+</head>
+
+<body>
+    <h1>履歴</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>質問</th>
+            <th>回答</th>
+            <th>面接で使用</th>
+            <th>操作</th>
+        </tr>
+        {% for record in answers %}
+        <tr>
+            <td>{{ record[0] }}</td> <!-- ID -->
+            <td>{{ record[1] }}</td> <!-- 質問 -->
+            <td>{{ record[2] }}</td> <!-- 回答 -->
+            <td>{{ 'はい' if record[3] else 'いいえ' }}</td> <!-- 面接で使用 -->
+            <td>
+                <form method="post" action="{{ url_for('delete_one', question=record[1]) }}" style="display:inline;">
+                    <button type="submit">削除</button>
+                </form>
+                <form method="post" action="{{ url_for('mark_as_asked', question=record[1]) }}" style="display:inline;">
+                    <button type="submit">使用済み</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form method="post" action="{{ url_for('delete_all') }}">
+        <button type="submit">全て削除</button>
+    </form>
+    <a href="{{ url_for('index') }}">ホームに戻る</a>
+</body>
+
+</html>
