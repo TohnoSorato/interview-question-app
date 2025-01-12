@@ -1,7 +1,3 @@
-# 面接アプリ
-
-python3 [app.py](http://app.py/) 
-
 # README: 面接質問アプリ
 
 ## 概要
